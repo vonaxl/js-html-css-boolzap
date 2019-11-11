@@ -1,0 +1,50 @@
+/* general rules */
+body{
+  position: relative;
+}
+
+    /* general rules */
+
+#bg{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: linear-gradient( #009688 0%, #009688 15%, #D8DBD7 15%, #D8DBD7 100%);
+  margin-top: auto;
+  padding: 1% 5%;
+}
+#user{
+  background: #EEEEEE;
+  min-height: 8vh;
+  width: 100%;
+}
+
+#navchat{
+  height: 95vh;
+  overflow: auto;
+  background: white;
+  border: 1px solid gray;
+}
+
+#chatwindow{
+  border: 1px solid gray;
+}
+
+#chatwindow #name{
+  background: #EEEEEE;
+  min-height: 8vh;
+  width: 100%;
+}
+
+#chatwindow #chatbox{
+  height: 80vh;
+  overflow-y: auto;
+  background-image: url(../img/bg.png);
+  background-size: 500px;
+  padding: 0 6em;
+}
+
+#chatwindow #chatsend{
+  height: 6vh;
+  background: #CBD3D3;
+}
