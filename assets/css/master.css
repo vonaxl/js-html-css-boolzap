@@ -75,3 +75,23 @@ body{
   padding: 0 1em;
   outline: none;
 }
+
+#template {
+  display: none;
+}
+
+.msgsent, .msgpc{
+  margin: 30px;
+}
+.msgsent .txt, .msgpc .txt{
+  text-align: right;
+  display: inline;
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 5px 15px;
+  background: greenyellow;
+}
+
+.msgpc .txt{
+  background: white;
+}
