@@ -2,7 +2,9 @@
 body{
   position: relative;
 }
-
+ul li a{
+  color: gray;
+}
     /* general rules */
 
 #bg{
@@ -19,6 +21,12 @@ body{
   box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.31);
 }
 
+/* ========================================NAVCHAT======================================= */
+#navchat{
+  height: 95vh;
+  background: white;
+}
+/* ===============user ROW=============== */
 #user{
   background: #EEEEEE;
   min-height: 65px;
@@ -26,7 +34,6 @@ body{
 }
 #user .col-3 img{
   width: 40px;
-
 }
 #user .col-6>ul{
   margin: 0;
@@ -34,20 +41,72 @@ body{
 #user .col-6 img{
   width: 25px;
 }
-#navchat{
-  height: 95vh;
-  overflow: auto;
-  background: white;
+/* ===============SEARCH ROW=============== */
+#search {
+  color: lightgray;
+  background: #F8F8F8;
+  padding: 12px 15px;
+  position: relative;
 }
+#search i{
+  position: absolute;
+  left: 25px;
+  bottom: 20px;
+}
+#search input{
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding: 5px 10px 5px 60px;
+  width: 100%;
+  font-size: 0.9em;
+}
+/* ===============CHATS USER ROW=============== */
+#chats.row{
+  overflow-y: auto;
+}
+#chats .col-12{
+  padding: 10px 20px;
+}
+#chats img{
+  width: 60px;
+  height: 40px;
+  margin-right: 20px;
+}
+#chats .box {
+  border-bottom: 1px lightgray solid;
+  width: 100%;
+}
+#chats .box p{
+  padding: 0;
+  margin-top: -6px;
+}
+
 /* =====================================CHATWINDOW======================================= */
 #chatwindow{
 }
-
+/* ===============NAME ROW=============== */
 #chatwindow #name{
   background: #EEEEEE;
-  min-height: 65px;
-  width: 100%;
+  height: 65px;
+  padding: 5px;
 }
+#chatwindow #name img{
+  width: 40px;
+  height: 50px;
+}
+#chatwindow #name .box h6,p{
+  padding: 0 25px;
+}
+#name .col-3{
+  padding: 0 20px;
+}
+#name .col-3 ul li{
+  padding-left: 15px;
+  font-size: 1.2em;
+  
+}
+/* ===============CHATBOX=============== */
 
 #chatwindow #chatbox{
   height: 82vh;
@@ -89,7 +148,7 @@ body{
 }
 
 .msgsent, .msgpc{
-  margin: 30px;
+  margin-bottom: 30px;
 }
 .msgsent .txt, .msgpc .txt{
   text-align: right;

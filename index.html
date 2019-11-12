@@ -13,6 +13,7 @@
       <div class="container-fluid">
         <div id="mainwindow" class="row">         
           <div id="navchat" class="col-3">
+            <!-- user -->
             <div class="row">
               <!-- user row with image and settings -->
               <div class="col-12">
@@ -22,28 +23,52 @@
                       <img src="assets/img/boy-1.svg" alt="">
                     </a>
                   </div>
-                  <div class="col-6 d-flex justify-content-end">
-                      <ul id="settings" class="list-inline">
+                  <div class="col-6 d-flex justify-content-end flex-nowrap">
+                      <ul id="settings" class="list-inline d-flex flex-nowrap">
                         <li class="list-inline-item"><a href=""><img src="assets/img/svg1.svg" alt=""></a></li>
                         <li class="list-inline-item"><a href=""><img src="assets/img/svg2.svg" alt=""></a></li>
                         <li class="list-inline-item"><a href=""><img src="assets/img/svg3.svg" alt=""></a></li>
                       </ul>
                   </div>
-
                 </div>
               </div>
             </div>
+            <!-- search -->
             <div class="row">
-              <div id="chats" class="col-12">
-                asd
+              <div id="search" class="col-12">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+              </div>
+            </div>
+            <!-- chats -->
+            <div id="chats" class="row">
+              <div class="col-12 d-flex flex-nowrap">
+                <img src="assets/img/girl-1.svg" alt="">
+                <div class="box  text-left">
+                  <h6>Giorgia&nbsp;Meloni</h6>
+                  <p>online</p>
+                </div>
               </div>
             </div>
           </div>
           <div id="chatwindow" class="col-9">
             <!-- name row -->
-            <div class="row">
-              <div id="name" class="col-12">
-                tizio Rossi
+            <div id="name" class="row justify-content-between align-items-center">
+              <!-- img name status -->
+              <div class="col-4 d-flex flex-nowrap ">
+                <img src="assets/img/girl-1.svg" alt="">
+                <div class="box">
+                  <h6>Giorgia&nbsp;Meloni</h6>
+                  <p>online</p>
+                </div>
+              </div>
+              <!-- name group  chat settings -->
+              <div class="col-3 text-right">
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a href=""><i class="fas fa-search"></i></a></li>
+                  <li class="list-inline-item"><a href=""><i class="fas fa-paperclip"></i></a></li>
+                  <li class="list-inline-item"><a href=""><i class="fas fa-ellipsis-v"></i></a></li>
+                </ul>
               </div>
             </div>
             <!-- chatbox window row -->
