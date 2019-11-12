@@ -3,22 +3,22 @@ $( document ).ready(function() {
     setTimeout(function(){ 
         var msgCopy = $("#template .msgpc").clone();
         msgCopy.find(".txt").text("Ciao")
-        $("#chatbox").append(msgCopy)
+        $("#chatbox").prepend(msgCopy)
      }, 3000);
     setTimeout(function(){ 
         var msgCopy = $("#template .msgpc").clone();
         msgCopy.find(".txt").text("Come va?")
-        $("#chatbox").append(msgCopy)
+        $("#chatbox").prepend(msgCopy)
      }, 6000);
     setTimeout(function(){ 
         var msgCopy = $("#template .msgpc").clone();
         msgCopy.find(".txt").text("ti va di uscire?")
-        $("#chatbox").append(msgCopy)
+        $("#chatbox").prepend(msgCopy)
      }, 10000);
     setTimeout(function(){ 
         var msgCopy = $("#template .msgpc").clone();
         msgCopy.find(".txt").text("Conosci per caso Michele de Rosa?")
-        $("#chatbox").append(msgCopy)
+        $("#chatbox").prepend(msgCopy)
      }, 15000);
 
 
@@ -32,7 +32,7 @@ $( document ).ready(function() {
         msgCopy.find(".txt").text(message)
 
         // send the message with it's template
-        $("#chatbox").append(msgCopy)
+        $("#chatbox").prepend(msgCopy)
 
         // clear the input 
         $("#msg").val("");
