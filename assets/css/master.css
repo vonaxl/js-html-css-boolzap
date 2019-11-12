@@ -21,28 +21,36 @@ body{
 
 #user{
   background: #EEEEEE;
-  min-height: 8vh;
-  width: 100%;
+  min-height: 65px;
   border-right: 1px lightgray solid;
 }
+#user .col-3 img{
+  width: 70%;
 
+}
+#user .col-6>ul{
+  margin: 0;
+}
+#user .col-6 img{
+  width: 28px;
+}
 #navchat{
   height: 95vh;
   overflow: auto;
   background: white;
 }
-
+/* =====================================CHATWINDOW======================================= */
 #chatwindow{
 }
 
 #chatwindow #name{
   background: #EEEEEE;
-  min-height: 8vh;
+  min-height: 65px;
   width: 100%;
 }
 
 #chatwindow #chatbox{
-  height: 80vh;
+  height: 82vh;
   overflow-y: auto;
   background-image: url(../img/bg.png);
   background-size: 500px;

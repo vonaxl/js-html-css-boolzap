@@ -40,7 +40,7 @@ $( document ).ready(function() {
 
     $("#send").click(sendmsgs);
 
-    $(window).on({
+    $("#chatwindow").on({
         keyup: function (k) {
             // console.log(k); //check which keycode 
             
