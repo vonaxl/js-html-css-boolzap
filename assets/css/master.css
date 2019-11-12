@@ -25,14 +25,14 @@ body{
   border-right: 1px lightgray solid;
 }
 #user .col-3 img{
-  width: 70%;
+  width: 40px;
 
 }
 #user .col-6>ul{
   margin: 0;
 }
 #user .col-6 img{
-  width: 28px;
+  width: 25px;
 }
 #navchat{
   height: 95vh;
