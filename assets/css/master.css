@@ -79,7 +79,7 @@ ul li a{
 /* ===============CHATS USER ROW=============== */
 #chats{
   overflow-y: auto;
-  height: 82.2vh;
+  max-height: calc(100% - 121px);
 }
 #chats .col-12{
   padding: 10px 20px;
