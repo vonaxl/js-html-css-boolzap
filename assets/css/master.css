@@ -131,7 +131,7 @@ ul li a{
   background-size: 500px;
   padding: 0 6em;
 }
-
+/* ===============CHAT SEND=============== */
 #chatwindow #chatsend{
   height: 6vh;
   position: absolute;
@@ -162,19 +162,26 @@ ul li a{
 #template {
   display: none;
 }
-
-.msgsent, .msgpc{
-  margin-bottom: 30px;
-}
-.msgsent .txt, .msgpc .txt{
-  text-align: right;
-  display: inline;
+.msgsent .box, .msgpc .box{
+  background: rgb(185, 223, 109);
+  text-align: left;
+  display: inline-block;
   font-size: 2em;
   border-radius: 10px;
   padding: 5px 15px;
-  background: greenyellow;
+  margin-bottom: 30px;
+  max-width: 75%;
+}
+.txt{
+  word-wrap: break-word;
 }
 
-.msgpc .txt{
+.msgpc .box{
+  text-align: left;
   background: white;
+}
+
+.msgsent .time, .msgpc .time{
+  font-size: 0.5em;
+  text-align: right;
 }
