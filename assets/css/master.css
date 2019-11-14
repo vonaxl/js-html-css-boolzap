@@ -108,6 +108,12 @@ ul li a{
 /* =====================================CHATWINDOW======================================= */
 #chatwindow{
 }
+#chatwindow .chatsbox {
+  display: none;
+}
+#chatwindow .active{
+  display: block ;
+}
 /* ===============NAME ROW=============== */
 #chatwindow #name{
   background: #EEEEEE;
@@ -166,7 +172,7 @@ ul li a{
   outline: none;
 }
 /* =====================================TEMPLATE SETUP======================================= */
-#template {
+#template,#templateMsg {
   display: none;
 }
 .msgsent .box, .msgpc .box{

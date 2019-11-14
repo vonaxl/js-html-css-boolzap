@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+    // =============================================PC INITAL REPLY=============================================     
     setTimeout(function(){ 
         timer();
         var msgCopy = $("#template .msgpc").clone();
@@ -14,7 +14,7 @@ $( document ).ready(function() {
         msgCopy.find(".time").text(timer)
         $("#chatbox").prepend(msgCopy)
      }, 6000);
-
+// =============================================FUNCTION PC REPLY=============================================
     //  function that reply okays for each word sent
      function ok(){ 
         timer();
@@ -23,7 +23,7 @@ $( document ).ready(function() {
         msgCopy.find(".time").text(timer);
         $("#chatbox").prepend(msgCopy);
      }
-
+// =============================================FUNCTION TO SEND MSG AND REPLY=============================================
      function sendmsgs(){
         timer()
         // get message on click from the input
@@ -43,7 +43,7 @@ $( document ).ready(function() {
         setTimeout(ok,1000);
     
     };
-    // HOURS AND MINUTES FUNCTIONS
+    // // =============================================HOURS AND MINUTES FUNCTIONS =============================================
     function addZero(i) {
         if (i < 10) {
           i = "0" + i;
@@ -57,7 +57,7 @@ $( document ).ready(function() {
         var x = h + ":" + m ;
         return x;
       }
-
+    // =============================================SEND MSGS=============================================
     $("#send").click(sendmsgs);
 
     $("#chatwindow").on({
@@ -70,59 +70,35 @@ $( document ).ready(function() {
             
         }
     });
-
+    // =============================================SEARCH BAR=============================================
     $("#searchbar").keyup(function () {
-        var kPress = $('#searchbar').val();
-        var gPress = kPress.toLocaleLowerCase();
+        var kPress = $('#searchbar').val().toLocaleLowerCase();
         // name on each h6
-        // var nameH6="";
-        
         if($(this).val() == ""){
             $('.contact').removeClass('importantHide')
         }
          else {
             $('.contact').addClass('importantHide');
-
-
             // cerca per ogni .contact il suo nome
             $(".contact").each(function(){
-                if ($(this).find('.box>h6').text().toLocaleLowerCase().includes(gPress)) {
-                    console.log(gPress);
+                if ($(this).find('.box>h6').text().toLocaleLowerCase().includes(kPress)) {
+                    console.log(kPress);
                     $(this).removeClass('importantHide')
                 }
 
-                // var name = [];
-                // var x = $(this).find('.box>h6').text()
-                // name.push(x)
-                // console.log(name);     
-                // // controlla quella h6 ha la lettera inserita nella searchbar
-                
-                // var z="",g="";
-                // for (var y = 0; y<name[0].length ; y++){
-                //     z=name[0][y];
-                //     g+=name[0][y];
-                //     l=z.toLocaleLowerCase();
-                //     if(gPress==l){
-                //         nameH6=name[0];
-                //     }
-                // }
-                
-                // console.log(g);
-                // console.log(nameH6);
-                
-                // // console.log(y);
-                
             });
 
+        }
+    });
+    $(this).find('.contact').click(function () {
+        
 
-
-
-
-            // $(".contact").each(function(){
-            //     if ($(this).find('.box>h6').val(kPress)) {
-            //         $("h6").parents(".content").removeClass('importantHide')
-            //     }
-            // });
+        if ($(this).hasClass('active')) {
+            console.log("clicked");
+            
+        }else {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
         }
     });
 
