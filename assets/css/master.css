@@ -20,6 +20,7 @@ ul li a{
 ::-webkit-scrollbar-thumb:hover {
   background: gray; 
 }
+
     /* general rules */
 
 #bg{
@@ -198,12 +199,22 @@ ul li a{
   cursor: pointer;
   display: block;
 }
-.msgsent .box .msgbox{
-  width: 100px;
-  height: 100px;
+.msgsent .box .msgbox,.msgpc .box .msgbox{
   position: absolute;
   border: 1px solid black;
   display: none;
+  font-size: 0.5em;
+  background: whitesmoke;
+}
+.nomarg{
+  padding: 0;
+  margin: 0;
+}
+.msgsent .box .msgbox ul li, .msgpc .box .msgbox ul li{
+  padding: 10px;
+}
+.msgsent .box .msgbox ul li:hover, .msgpc .box .msgbox ul li:hover{
+  cursor: pointer;
 }
 
 .txt{

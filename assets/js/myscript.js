@@ -101,9 +101,11 @@ $( document ).ready(function() {
  
     });
 
-    $(this).find('.msgsent .box').click(function () {
-        // $('.msgsent .box .msgbox').toggle();
-        console.log("asdasdasd");
+    $(this).on('click', 'i' ,function () {
+        $(this).siblings('.msgbox').toggle();
         
     });
+    $(this).on('click', 'li:nth-child(2)',function (){
+        $(this).parents('.msgsent').remove();
+    });  
 });
