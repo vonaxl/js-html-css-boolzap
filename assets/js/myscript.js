@@ -5,14 +5,14 @@ $( document ).ready(function() {
         var msgCopy = $("#template .msgpc").clone();
         msgCopy.find(".txt").text("Ciao")
         msgCopy.find(".time").text(timer)
-        $("#chatbox").prepend(msgCopy)
+        $("#chatwindow .chatsbox.active .chatbox").prepend(msgCopy)
      }, 3000);
     setTimeout(function(){ 
         timer();
         var msgCopy = $("#template .msgpc").clone();
         msgCopy.find(".txt").text("Come va?")
         msgCopy.find(".time").text(timer)
-        $("#chatbox").prepend(msgCopy)
+        $("#chatwindow .chatsbox.active .chatbox").prepend(msgCopy)
      }, 6000);
 // =============================================FUNCTION PC REPLY=============================================
     //  function that reply okays for each word sent
@@ -21,13 +21,13 @@ $( document ).ready(function() {
         var msgCopy = $("#template .msgpc").clone();
         msgCopy.find(".txt").text("ok");
         msgCopy.find(".time").text(timer);
-        $("#chatbox").prepend(msgCopy);
+        $("#chatwindow .chatsbox.active .chatbox").prepend(msgCopy);
      }
 // =============================================FUNCTION TO SEND MSG AND REPLY=============================================
      function sendmsgs(){
         timer()
         // get message on click from the input
-        var message=$("#msg").val();
+        var message=$(".chatsbox.active .msg").val();
         console.log(message);
 
         // copy the message template
@@ -35,10 +35,10 @@ $( document ).ready(function() {
         msgCopy.find(".txt").text(message)
         msgCopy.find(".time").text(timer)
         // send the message with it's template
-        $("#chatbox").prepend(msgCopy)
+        $("#chatwindow .chatsbox.active .chatbox").prepend(msgCopy)
         timer();
         // clear the input 
-        $("#msg").val("");
+        $("#chatwindow .chatsbox.active .msg").val("");
 
         setTimeout(ok,1000);
     
@@ -58,7 +58,7 @@ $( document ).ready(function() {
         return x;
       }
     // =============================================SEND MSGS=============================================
-    $("#send").click(sendmsgs);
+    $(".send").click(sendmsgs);
 
     $("#chatwindow").on({
         keyup: function (k) {
@@ -90,16 +90,20 @@ $( document ).ready(function() {
 
         }
     });
-    $(this).find('.contact').click(function () {
-        
 
-        if ($(this).hasClass('active')) {
-            console.log("clicked");
-            
-        }else {
-            $(this).siblings().removeClass('active');
-            $(this).addClass('active');
-        }
+    // ================================================3 ESERCIZIO=================================================
+    $(this).find('.contact').click(function () {
+
+        var posContact = $(this).index();
+        console.log(posContact);
+        $('#chatwindow .chatsbox').siblings().removeClass('active');
+        $('#chatwindow .chatsbox').eq(posContact).addClass('active');
+ 
     });
 
+    $(this).find('.msgsent .box').click(function () {
+        // $('.msgsent .box .msgbox').toggle();
+        console.log("asdasdasd");
+        
+    });
 });
