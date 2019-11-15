@@ -1,8 +1,8 @@
 /* general rules */
-body{
+body {
   position: relative;
 }
-ul li a{
+ul li a {
   color: gray;
 }
 ::-webkit-scrollbar {
@@ -10,66 +10,71 @@ ul li a{
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: darkgray;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: gray; 
+  background: gray;
 }
 
-    /* general rules */
+/* general rules */
 
-#bg{
+#bg {
   height: 100%;
   width: 100%;
   position: fixed;
-  background: linear-gradient( #009688 0%, #009688 15%, #D8DBD7 15%, #D8DBD7 100%);
+  background: linear-gradient(
+    #009688 0%,
+    #009688 15%,
+    #d8dbd7 15%,
+    #d8dbd7 100%
+  );
   margin-top: auto;
   padding: 1% 5%;
 }
-#mainwindow{
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.31);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.31);
-  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.31);
+#mainwindow {
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.31);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.31);
 }
 
 /* ========================================NAVCHAT======================================= */
-#navchat{
+#navchat {
   height: 95vh;
   background: white;
 }
 /* ===============user ROW=============== */
-#user{
-  background: #EEEEEE;
+#user {
+  background: #eeeeee;
   min-height: 65px;
   border-right: 1px lightgray solid;
 }
-#user .col-3 img{
+#user .col-3 img {
   width: 40px;
 }
-#user .col-6>ul{
+#user .col-6 > ul {
   margin: 0;
 }
-#user .col-6 img{
+#user .col-6 img {
   width: 25px;
 }
 /* ===============SEARCH ROW=============== */
 #search {
   color: lightgray;
-  background: #F8F8F8;
+  background: #f8f8f8;
   padding: 12px 15px;
   position: relative;
 }
-#search i{
+#search i {
   position: absolute;
   left: 25px;
   bottom: 20px;
 }
-#search input{
+#search input {
   border-radius: 30px;
   border: none;
   outline: none;
@@ -78,14 +83,14 @@ ul li a{
   font-size: 0.9em;
 }
 /* ===============contacts USER ROW=============== */
-#contacts{
+#contacts {
   overflow-y: auto;
   max-height: calc(100% - 121px);
 }
-#contacts .col-12{
+#contacts .col-12 {
   padding: 10px 20px 2px 20px;
 }
-#contacts img{
+#contacts img {
   width: 60px;
   height: 50px;
   margin-right: 20px;
@@ -94,51 +99,51 @@ ul li a{
   border-bottom: 1px lightgray solid;
   width: 100%;
 }
-#contacts .box p{
+#contacts .box p {
   padding: 0;
   margin-top: -6px;
 }
-.importantHide{
+.importantHide {
   display: none !important;
 }
 
-#contacts .contact:hover{
- background: lightgray;
- cursor: pointer;
+#contacts .contact:hover {
+  background: lightgray;
+  cursor: pointer;
 }
 /* =====================================CHATWINDOW======================================= */
-#chatwindow{
+#chatwindow {
 }
 #chatwindow .chatsbox {
   display: none;
 }
-#chatwindow .active{
-  display: block ;
+#chatwindow .active {
+  display: block;
 }
 /* ===============NAME ROW=============== */
-#chatwindow #name{
-  background: #EEEEEE;
+#chatwindow #name {
+  background: #eeeeee;
   height: 65px;
   padding: 5px;
 }
-#chatwindow #name img{
+#chatwindow #name img {
   width: 40px;
   height: 50px;
 }
-#chatwindow #name .box h6,p{
+#chatwindow #name .box h6,
+p {
   padding: 0 25px;
 }
-#name .col-3{
+#name .col-3 {
   padding: 0 20px;
 }
-#name .col-3 ul li{
+#name .col-3 ul li {
   padding-left: 15px;
   font-size: 1.2em;
-  
 }
 /* ===============CHATBOX=============== */
 
-#chatwindow .chatbox{
+#chatwindow .chatbox {
   height: 82vh;
   overflow-y: auto;
   background-image: url(../img/bg.png);
@@ -150,20 +155,22 @@ ul li a{
   height: 6vh;
   position: absolute;
   bottom: 0;
-  background: #EFEFEF;
+  background: #efefef;
   border-left: 1px lightgray solid;
 }
 
-.chatsend  .fas, .far{
+.chatsend .fas,
+.far {
   font-size: 1.6rem;
   color: gray;
 }
 
-.chatsend  .fas:hover, .far:hover{
+.chatsend .fas:hover,
+.far:hover {
   cursor: pointer;
 }
 
-.chatsend  input{
+.chatsend input {
   width: 100%;
   margin: 1vh 0;
   height: 4vh;
@@ -173,10 +180,12 @@ ul li a{
   outline: none;
 }
 /* =====================================TEMPLATE SETUP======================================= */
-#template,#templateMsg {
+#template,
+#templateMsg {
   display: none;
 }
-.msgsent .box, .msgpc .box{
+.msgsent .box,
+.msgpc .box {
   background: rgb(185, 223, 109);
   text-align: left;
   display: inline-block;
@@ -188,45 +197,51 @@ ul li a{
   min-width: 10%;
   position: relative;
 }
-.msgsent .box i, .msgpc .box i{
+.msgsent .box i,
+.msgpc .box i {
   font-size: 0.5em;
   position: absolute;
   top: 15px;
   right: 10px;
   display: none;
 }
-.msgsent .box:hover i, .msgpc .box:hover i{
+.msgsent .box:hover i,
+.msgpc .box:hover i {
   cursor: pointer;
   display: block;
 }
-.msgsent .box .msgbox,.msgpc .box .msgbox{
+.msgsent .box .msgbox,
+.msgpc .box .msgbox {
   position: absolute;
   border: 1px solid black;
   display: none;
   font-size: 0.5em;
   background: whitesmoke;
 }
-.nomarg{
+.nomarg {
   padding: 0;
   margin: 0;
 }
-.msgsent .box .msgbox ul li, .msgpc .box .msgbox ul li{
+.msgsent .box .msgbox ul li,
+.msgpc .box .msgbox ul li {
   padding: 10px;
 }
-.msgsent .box .msgbox ul li:hover, .msgpc .box .msgbox ul li:hover{
+.msgsent .box .msgbox ul li:hover,
+.msgpc .box .msgbox ul li:hover {
   cursor: pointer;
 }
 
-.txt{
+.txt {
   word-wrap: break-word;
 }
 
-.msgpc .box{
+.msgpc .box {
   text-align: left;
   background: white;
 }
 
-.msgsent .time, .msgpc .time{
+.msgsent .time,
+.msgpc .time {
   font-size: 0.5em;
   text-align: right;
   color: gray;
