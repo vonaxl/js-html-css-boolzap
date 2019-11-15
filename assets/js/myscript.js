@@ -93,7 +93,7 @@ $( document ).ready(function() {
 
     // ================================================3 ESERCIZIO=================================================
     $(this).find('.contact').click(function () {
-
+        // get the index of the target then use it with eq()
         var posContact = $(this).index();
         console.log(posContact);
         $('#chatwindow .chatsbox').siblings().removeClass('active');
